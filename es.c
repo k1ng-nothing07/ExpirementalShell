@@ -26,9 +26,10 @@
       else if (strcmp(terminal, "help") == 0) {
             printf("Available commands:\n");
                printf("exit - Exit The Shell\n");
-               printf("clear - Clear The Shell\n");
+                  printf("clear - Clear The Shell\n");
+               printf("pwd - Show The Current Directory\n");
             printf("help - Show The Current Help Menu\n");
-            printf("$  ");
+         printf("$  ");
       scanf("%s", terminal);
          
       }
