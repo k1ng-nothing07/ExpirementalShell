@@ -42,6 +42,7 @@
             printf("rmdir - Remove A Directory\n");
             printf("touch - Create A File\n");
             printf("rmfile - Remove A File");
+            printf("echo - echo to the Terminal.\n");
          printf("$  ");
       scanf("%s", terminal);
          
@@ -173,6 +174,17 @@
                scanf("%s", terminal);
             }
          }
+      else if (strcmp(terminal, "echo") == 0) {
+         char echo[100];
+        if (fgets(echo, sizeof(echo), stdin) != NULL) {
+         printf("%s\n", echo);
+        }
+         
+         
+         printf("$  ");
+         scanf("%s", terminal);
+
+      }
          
         else {
          printf("bash: %s: command not found.\n", terminal);
