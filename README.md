@@ -21,3 +21,8 @@
     ## to install it/run it on linux:
     gcc es.c -o es (if you have downloaded the src code.)
     ./es (runs it)
+
+    ## to install it/run it on windows:
+        open MSYS2
+        ./es.exe
+        
