@@ -15,7 +15,10 @@
      clear
      exit
      help
-    
+     rmdir
+     mkdir
+     ls
+     more...
             (help can list the commands.)
 
     ## to install it/run it on linux:
