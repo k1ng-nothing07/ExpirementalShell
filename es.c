@@ -4,10 +4,15 @@
 
  int main() {
       char terminal[100];
+
+
    printf("Welcome to the terminal.\n\n");
     sleep(1);
-    printf(">  ");
+
+
+    printf("$  ");
       scanf("%s", terminal);
+
          while (1) {
      if  (strcmp(terminal, "exit") == 0) {
           printf("exiting the terminal...\n");
@@ -15,7 +20,7 @@
         }
       else if (strcmp(terminal, "clear") == 0) {
           printf("\033[2J\033[1;1H");
-       printf(">  ");
+       printf("$  ");
       scanf("%s", terminal);
       }
       else if (strcmp(terminal, "help") == 0) {
@@ -23,13 +28,23 @@
                printf("exit - Exit The Shell\n");
                printf("clear - Clear The Shell\n");
             printf("help - Show The Current Help Menu\n");
-            printf(">  ");
+            printf("$  ");
       scanf("%s", terminal);
          
       }
+      
+      else if  (strcmp(terminal, "pwd") == 0) {
+          char cwd[1024];
+           if (getcwd(cwd, sizeof(cwd)) != NULL);
+            printf("%s\n", cwd);
+             printf("current directory: %s\n", cwd);
+            printf("$  ");
+             scanf("%s", terminal);
+
+      } 
         else {
          printf("bash: %s: command not found.\n", terminal);
-         printf(">  ");
+         printf("$  ");
          scanf("%s", terminal);
         }
       }
